@@ -1,0 +1,54 @@
+---
+const projects = [
+  {
+    title: "Rodaa App",
+    image: "/project/image04.png",
+    description:
+      "Desarrolle una aplicacion de movilidad, que permite solicitar servicios de transporte de manera rapida y segura.",
+    technologies: ["Flutter", "NestJS", "PostgreSQL", "Next.js", "Tailwind CSS", "Otros"],
+    link: "https://rodaapp.com/",
+  },
+  {
+    title: "Lox Network",
+    image: "/project/image03.png",
+    description:
+      "Participe en el desarrollo de la pagina web de Lox Network, una criptomoneda que busca mejorar la seguridad de los usuarios.",
+    technologies: ["gatsby", "Node.js"],
+    link:"https://loxcoin.io/"
+  }
+];
+---
+
+
+<div class="flex justify-center gap-4 flex-wrap">
+{projects.map((project) => (
+    <div class="bg-white border rounded-lg shadow dark:bg-gray-800 border-gray-700 max-w-[380px] md:w-[350px] max-h-400px transition hover:scale-105">
+    <a href={project.link} target="_blank"><img
+        class="rounded-t-lg"
+        src={project.image}
+        alt={`Imagen de ${project.title}`}
+    /></a>
+    <div class="p-5">
+        <h3 class="mb-2 text-xl font-semibold  text-white">
+        {project.title}
+        </h3>
+        <p class="mb-3  text-gray-400">
+        {project.description}
+        </p>
+
+        <!-- Tecnologías utilizadas en este proyecto -->
+        <div class="flex flex-wrap gap-2">
+        {project.technologies.map((tech) => (
+            <span
+            class=" text-sm font-medium px-2.5 py-1 rounded 
+                    bg-blue-900 text-blue-300"
+            >
+            {tech}
+            </span>
+        ))}
+        </div>
+    </div>
+    </div>
+))}
+</div>
+
