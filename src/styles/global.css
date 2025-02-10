@@ -20,6 +20,7 @@ body {
   flex-direction: column; 
   min-height: 100vh;
   background-color: #010101;
+  color: #fff;
 }
 
 @media (prefers-reduced-motion: reduce) {
