@@ -4,15 +4,19 @@ import Experience from "./ExperienceItem.astro";
 const arrayExperience = [
   {
     date: "Dic 2023 - Jul 2024",
-    title: "Director TI - TechComet",
-    description:
-      "I will lead a team to resolve efficiency issues in the core application, reducing server costs by 82% and strengthening operational sustainability.",
+    title: "Product Manager - TechComet",
+    description: `● Led a team of 5 programmers, coordinating the migration of a project from React Native
+to Flutter, which enhanced efficiency and modernized the application.
+● Actively participated as a FullStack Developer in implementing and finalizing code for
+critical projects, ensuring adherence to deadlines and quality standards.
+`,
   },
   {
     date: "Jun 2022 - Dic 2023",
     title: "Developer FullStack - TechComet",
-    description:
-      "I participated in blockchain projects and efficiency algorithms. I contributed to a mobile taxi app, implementing key features and ensuring its quality.",
+    description: `● Contributed to blockchain projects and the development of efficiency algorithms.
+● Collaborated in the development of mobile and web applications, including utilizing
+React Native for integration and technology migration projects.`,
   },
   {
     date: "Abr 2021 - Jun 2022",
@@ -21,11 +25,8 @@ const arrayExperience = [
       "I was involved in the entire development cycle of various applications, correcting errors, analyzing systems and improving product efficiency.",
   },
 ];
-
 ---
 
 <ol class="relative border-s border-gray-200">
   {arrayExperience.map((experience) => <Experience {...experience} />)}
-
-  
 </ol>
